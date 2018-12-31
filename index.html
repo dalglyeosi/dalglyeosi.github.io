@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+ 
+function cal(num){
+document.myform.screen.value +=num;
+}
+ 
+function answer(){
+document.myform.screen.value=eval(document.myform.screen.value);
+}
+ 
+function clearcal(){
+document.myform.screen.value="";
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H3>자바스크립트 계산기</H3>
+<FORM NAME="myform">
+<TABLE BORDER="0" BGCOLOR="#eeeeee" CELLSPACING="0">
+<TR><TD>
+<INPUT TYPE="text" NAME="screen">
+</TD></TR>
+<TR><TD>
+<INPUT TYPE="button" VALUE="  7  " onclick="cal('7')">
+<INPUT TYPE="button" VALUE="  8  " onclick="cal('8')">
+<INPUT TYPE="button" VALUE="  9  " onclick="cal('9')">
+<INPUT TYPE="button" VALUE="  +  " onclick="cal('+')">
+</TD></TR>
+<TR><TD>
+<INPUT TYPE="button" VALUE="  4  " onclick="cal('4')">
+<INPUT TYPE="button" VALUE="  5  " onclick="cal('5')">
+<INPUT TYPE="button" VALUE="  6  " onclick="cal('6')">
+<INPUT TYPE="button" VALUE="  *  " onclick="cal('*')">
+</TD></TR>
+<TR><TD>
+<INPUT TYPE="button" VALUE="  1  " onclick="cal('1')">
+<INPUT TYPE="button" VALUE="  2  " onclick="cal('2')">
+<INPUT TYPE="button" VALUE="  3  " onclick="cal('3')">
+<INPUT TYPE="button" VALUE="  /  " onclick="cal('/')">
+</TD></TR>
+<TR><TD>
+<INPUT TYPE="button" VALUE="  0  " onclick="cal('0')">
+<INPUT TYPE="button" VALUE="  .  "  onclick="cal('.')">
+<INPUT TYPE="button" VALUE=" Clear " onclick="clearcal()">
+<INPUT TYPE="button" VALUE="   =   " onclick="answer()">
+</TD></TR>
+</TABLE>
+</FORM>
+</CENTER>
+</BODY>
+</HTML>
