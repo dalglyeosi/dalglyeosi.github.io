@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
 <body>
 <meta name=viewport content="width=device-width, initial-scale=1">
@@ -561,170 +561,145 @@ if(parseInt(document.getElementById('sell2').value)>21) {
 
  }
 }
+
+function show_layer(div_name){
+ document.all.div_01.style.display="none";
+ document.all.div_02.style.display="none";
+
+ switch(div_name)
+ {
+  case '1':
+  document.all.div_01.style.display="";
+  break;
+  case '2':
+  document.all.div_02.style.display="";
+  break;
+}
+}
 </script>
 
+<style>
+body {
 
+   position: absolute;
+    width: 400px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+line-height: 200px; 
+ display: inline-block;
+  vertical-align: middle;
 
+}
+td { font-size:11pt; letter-spacing:-1px;text-align:center; }
 
-<table border="0" align="center" width="370">
-    <tr>
-        <td width="400" colspan="2" height="145" align="center" valign="middle">
-            <p align="center"><b><span style="font-size:24pt;"><font face="맑은 고딕">🍁여성시대 메이플달글🍁</font></span></b><font face="맑은 고딕"></font></p>
-            <p align="center"><font face="맑은 고딕">주문의 흔적 몇퍼로 강화되었는지 알아보는 용!</font></p>
-</td>
-    </tr>
-    <tr>
-        <td width="400" colspan="2" height="65">
-            <p align="center"><b>아이템 종류 선택</b><br>
+</style>
+
+ <table width="400" height=50 cellspacing="0" cellpadding="0" border="0" align="center" style="padding:0px; 0 0px 0;" >
+  <tr>
+   <td style="background-color:dddddd;" width=200 onclick="javascript:show_layer('1');" onmouseover="this.style.background='#cccccc'" onmouseout="this.style.background='#dddddd'">
+주흔작 계산기</td>
+   <td style="background-color:dddddd;" width=200 onclick="javascript:show_layer('2');" onmouseover="this.style.background='#cccccc'" onmouseout="this.style.background='#dddddd'">
+추옵 계산기</td>
+  </tr>
+</table>
+
+<DIV id=div_01>
+<table border="0" align="center" width="400" style="padding:20px 0 0 0; float:left;">
+<tr><td colspan=2 width="400" style="font-size:20pt;text-align:center; letter-spacing:-3px;"><b>주흔작 계산기</b></td></tr>
+<tr><td style="padding:5px 0 5px 0px"></td></tr>
+<tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 0px">사용방법 및 유의사항</td></tr>
+<tr><td colspan=2 style="font-size:10pt;text-align:left; padding:5px 0 5px 0px">
+- 방어구(데벤져,글러브 제외)는 적혀진대로 입력하면 됩니다. <br>
+- 위치 참고는 <a href=https://i.imgur.com/5RFRpKI.png>[여기]</a>를 클릭해주세요. <br>
+- 렙제는 글러브에만 선택해주시면 됩니다. <br>
+- 일반 무기/방어구는 120제 이상의 아이템에만 적용됩니다.<br>
+- 글러브는 주스텟에 공/마, 부스텟에는 강화된 스타포스 수를 써주세요<br>
+  (아래에 보면 'n성 강화 적용'이라고 적혀있는데 여기서 n을 입력)<br>
+- 전사ㅣ주스텟 STR / 부스텟 DEX<br>
+&nbsp;&nbsp;궁수ㅣ주스텟 DEX / 부스텟 STR<br>
+&nbsp;&nbsp;도적ㅣ주스텟 LUK / 부스텟 DEX<br>
+&nbsp;&nbsp;법사ㅣ주스텟 INT / 부스텟 LUK<br>
+&nbsp;&nbsp;해적ㅣ주스텟 STR 또는 DEX / 부스텟 DEX 또는 STR<br>
+- 데벤져 무기일 경우 주스텟에는 HP, 부스텟에는 MP를 써주세요.<br>
+- 데벤져 방어구일 경우 주스텟에는 HP, 부스텟에는 강화된 스타포스 수를 써주세요.<br>
+- 데벤져 방어구일 경우 150제 아이템에만 적용됩니다.<br>
+
+</td></tr>
+<tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 0px">아이템 종류 선택</td></tr>
+<tr><td colspan=2>
 <input type="radio" name="option" onclick='call()' value="1"/>무기    
 <input type="radio" name="option" onclick='call()' value="2"/>방어구    
 <input type="radio" name="option" onclick='call()' value="3"/>데벤무기    
 <input type="radio" name="option" onclick='call()' value="4"/>데벤방어구<br>
-<input type="radio" name="option" onclick='call();buttoncontrol();' value="5"/>글러브 <br></p>
-</td>
-    </tr>
-    <tr>
-        <td width="400" height="62" colspan="2" valign="top">
-<p align="center"><b>글러브 렙제 선택</b><br>
+<input type="radio" name="option" onclick='call();buttoncontrol();' value="5"/>글러브
+(글러브 선택 시 렙제를 선택해주세요)
+</td></tr>
+<tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 5px">(글러브 전용) 렙제 선택</td></tr>
+<tr><td colspan=2 style="padding:0px 0 15px 0">
 <input type="radio" name="level" id ="level" onclick='call()' disabled value="1"/>120   
 <input type="radio" name="level" id ="level2" onclick='call()' disabled value="2"/>130    
 <input type="radio" name="level" id ="level3" onclick='call()' disabled value="3"/>140
 <input type="radio" name="level" id ="level4" onclick='call()' disabled value="4"/>150
 <input type="radio" name="level" id ="level5" onclick='call()' disabled value="5"/>160
  <input type="radio" name="level" id ="level6" onclick='call()' disabled value="6"/>200
-</p>
-
-</td>
-    </tr>
-    <tr>
-        <td width="193" height="29" bgcolor="#EDEDED">
-            <p align="right"><b><font face="맑은 고딕">주스텟 &nbsp;</font></b></p>
-</td>
-        <td width="201" height="29">
-            <p align="left"><font face="맑은 고딕"> &nbsp;
-<input type='text' name='sell1' id='sell1' onkeyup='call()'></font></p>
-</td>
-    </tr>
-    <tr>
-        <td width="193" height="29" bgcolor="#EDEDED">
-            <p align="right"><b><font face="맑은 고딕">부스텟 &nbsp;</font></b></p>
-</td>
-        <td width="201" height="29">
-            <p align="left"><font face="맑은 고딕"> &nbsp;
-<input type='text' name='sell2' id='sell2' onkeyup='call()'></font></p>
-</td>
-    </tr>
-    <tr>
-        <td width="193" height="29" bgcolor="#EDEDED">
-            <p align="right"><b><font face="맑은 고딕">작횟수 &nbsp;</font></b></p>
-</td>
-        <td width="201" height="29">
-            <p align="left"><font face="맑은 고딕"> &nbsp;
-<input type='text' name='sell3' id='sell3' onkeyup='call()'></font></p>
-</td>
-    </tr>
-    <tr>
-        <td width="193" height="29" bgcolor="#EDEDED">
-            <p align="right"><b><font face="맑은 고딕">결과 &nbsp;</font></b></p>
-</td>
-        <td width="201" height="29">
-            <p align="left"><font face="맑은 고딕"> &nbsp;
-<input type='text' name='sell4' id='sell4' onkeyup='call()'></font></p>
-</td>
-    </tr>
-    <tr>
-        <td width="400" height="53" colspan="2">
-
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">- 렙제는 글러브에만 선택해주시면 됩니다.</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">- 일반 무기/방어구는 120제 이상의 아이템에만 적용됩니다.</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">- 데벤져의 무기일 경우 주스텟에는 HP, 부스텟에는 MP를 써주세요.</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">- 데벤져의 방어구일 경우 주스텟에는 HP, 부스텟에는 강화된 스타포스 수를 써주세요.</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">- 데벤져 방어구의 경우 자료부족으로 (ㅠㅠ) 150제 아이템 밖에 적용되지 않습니당... 후에 자료를 찾으면 추가하겠습니다!</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">- 글러브는 주스텟에 공/마, 부스텟에는 강화된 스타포스 수를 써주세요</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">&nbsp;&nbsp;(아래에 보면 'n성 강화 적용'이라고 적혀있는데 여기서 n을 입력) </font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">- 전사의 주스텟은 STR고 부스텟은 DEX</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">&nbsp;&nbsp;궁수의 주스텟은 DEX고 부스텟은 STR</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">&nbsp;&nbsp;도적의 주스텟은 LUK고 부스텟은 DEX</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">&nbsp;&nbsp;법사의 주스텟은 INT고 부스텟은 LUK</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">&nbsp;&nbsp;해적의 주스텟은 STR 또는 DEX고 부스텟은 DEX 또는 STR</font></span></p>
-</td>
-    </tr>
+</td></tr>
+<tr>
+<td width=170 style="text-align:right;">주스텟</td>
+<td width=230><input type='text' name='sell1' id='sell1' onkeyup='call()'></td>
+</tr>
+<tr>
+<td width=170 style="text-align:right;">부스텟</td>
+<td width=230><input type='text' name='sell2' id='sell2' onkeyup='call()' width="100%"></td>
+</tr>
+<tr>
+<td width=170 style="text-align:right;">작횟수</td>
+<td width=230><input type='text' name='sell3' id='sell3' onkeyup='call()'></td>
+</tr>
+<tr>
+<td width=170 style="text-align:right;">결과</td>
+<td width=230><input type='text' name='sell4' id='sell4' onkeyup='call()'></td>
+</tr>
+<tr><td colspan=2 style="padding:15px 5px 5px 5px; text-align:center; font-size:8pt"><b>🍁여성시대 메이플달글🍁</b></td></tr>
 </table>
-<a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)"> 
-<br>
-<p align="center"><b>(주흔용) 메린이 메시를 위한 위치참고!</b></p>
-</a><div style="DISPLAY: none">
-<p align="center"><img src=https://i.imgur.com/5RFRpKI.png></p>
+
 </div>
 
 
 
-<br><p align="center">
-<hr>
-</p>
-<table border="0" align="center" width="370">
-    <tr>
-        <td width="400" colspan="2" height="52" align="center" valign="middle">
-            <p align="center"><b>추가옵션 급 계산기</b></p>
-</td>
-    </tr>
-    <tr>
-        <td width="193" height="29" bgcolor="#EDEDED">
+<DIV id=div_02 style="DISPLAY: none">
+<table border="0" align="center" width="400" style="padding:20px 0 0px 0; float:right;">
+<tr><td colspan=2 width="400" style="font-size:20pt;text-align:center; letter-spacing:-3px;"><b>추가옵션 계산기</b></td></tr>
+<tr><td style="padding:5px 0 5px 0px"></td></tr>
+<tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 0px">사용방법 및 유의사항</td></tr>
+<tr><td colspan=2 style="font-size:10pt;text-align:left; padding:5px 0 15px 0px">
+- 저자본을 기준으로 한 대략적인 결과입니다. <br>
+- 위치 참고는 <a href=https://i.imgur.com/6srPEo3.png>[여기]</a>를 클릭해주세요. <br>
+- 렙제는 글러브에만 선택해주시면 됩니다. <br>
 
-            <p align="right"><b><font face="맑은 고딕">주스텟 &nbsp;</font></b></p>
-</td>
-        <td width="201" height="29">
-            <p align="left"><font face="맑은 고딕"> &nbsp;<input type='text' name='m1' id='m1' onkeyup='whatkup()'></font></p>
-</td>
-    </tr>
-    <tr>
-        <td width="193" height="29" bgcolor="#EDEDED">
-
-            <p align="right"><b><font face="맑은 고딕">올스텟퍼 &nbsp;</font></b></p>
-</td>
-        <td width="201" height="29">
-            <p align="left"><font face="맑은 고딕"> &nbsp;<input type='text' name='m2' id='m2' onkeyup='whatkup()'></font></p>
-</td>
-    </tr>
-    <tr>
-        <td width="193" height="29" bgcolor="#EDEDED">
-
-            <p align="right"><b><font face="맑은 고딕">공격력/마력 &nbsp;</font></b></p>
-</td>
-        <td width="201" height="29">
-            <p align="left"><font face="맑은 고딕"> &nbsp;<input type='text' name='m3' id='m3' onkeyup='whatkup()'></font></p>
-</td>
-    </tr>
-    <tr>
-        <td width="193" height="29" bgcolor="#EDEDED">
-
-            <p align="right"><b><font face="맑은 고딕">결과 &nbsp;</font></b></p>
-</td>
-        <td width="201" height="29">
-            <p align="left"><font face="맑은 고딕"> &nbsp;<input type='text' name='result' id='result' onkeyup='whatkup()'></font></p>
-</td>
-    </tr>
-    <tr>
-        <td width="400" height="53" colspan="2">
-
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕">- 저자본을 기준으로 한 대략적인 결과입니다.</font></span></p>
-            <p style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size:9pt;"><font face="맑은 고딕"></font></span></p>
-</td>
-    </tr>
+</td></tr>
+<tr>
+<td width=170 style="text-align:right;">주스텟</td>
+<td width=230><input type='text' name='m1' id='m1' onkeyup='whatkup()'></td>
+</tr>
+<tr>
+<td width=170 style="text-align:right;">올스텟퍼</td>
+<td width=230><input type='text' name='m2' id='m2' onkeyup='whatkup()'></td>
+</tr>
+<tr>
+<td width=170 style="text-align:right;">공격력/마력</td>
+<td width=230><input type='text' name='m3' id='m3' onkeyup='whatkup()'></td>
+</tr>
+<tr>
+<td width=170 style="text-align:right;">결과</td>
+<td width=230><input type='text' name='result' id='result' onkeyup='whatkup()'></td>
+</tr>
+<tr><td colspan=2 style="padding:15px 5px 5px 5px; text-align:center; font-size:8pt"><b>🍁여성시대 메이플달글🍁</b></td></tr>
 </table>
-<br>
-</p></p></p>
-<a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)"> 
-<p align="center"><b>(추옵용) 메린이 메시를 위한 위치참고!</b></p>
-</a><div style="DISPLAY: none">
-<p align="center"><img src=https://i.imgur.com/6srPEo3.png></p>
 </div>
-
-
-
-
 
 
 <!--<b>무기용</b><br>
