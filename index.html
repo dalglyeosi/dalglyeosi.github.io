@@ -582,7 +582,7 @@ function show_layer(div_name){
 body {
 
    position: absolute;
-    width: 400px;
+    width: 370px;
     height: 100%;
     top: 0;
     bottom: 0;
@@ -598,7 +598,7 @@ td { font-size:11pt; letter-spacing:-1px;text-align:center; }
 
 </style>
 
- <table width="400" height=50 cellspacing="0" cellpadding="0" border="0" align="center" style="padding:0px; 0 0px 0;" >
+ <table width="370" height=50 cellspacing="0" cellpadding="0" border="0" align="center" style="padding:0px; 0 0px 0;" >
   <tr>
    <td style="background-color:dddddd;" width=200 onclick="javascript:show_layer('1');" onmouseover="this.style.background='#cccccc'" onmouseout="this.style.background='#dddddd'">
 주흔작 계산기</td>
@@ -608,25 +608,29 @@ td { font-size:11pt; letter-spacing:-1px;text-align:center; }
 </table>
 
 <DIV id=div_01>
-<table border="0" align="center" width="400" style="padding:20px 0 0 0; float:left;">
-<tr><td colspan=2 width="400" style="font-size:20pt;text-align:center; letter-spacing:-3px;"><b>주흔작 계산기</b></td></tr>
+<table border="0" align="center" width="370" style="padding:20px 0 0 0; float:left;">
+<tr><td colspan=2 width="370" style="font-size:20pt;text-align:center; letter-spacing:-3px;"><b>주흔작 계산기</b></td></tr>
 <tr><td style="padding:5px 0 5px 0px"></td></tr>
 <tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 0px">사용방법 및 유의사항</td></tr>
 <tr><td colspan=2 style="font-size:10pt;text-align:left; padding:5px 0 5px 0px">
 - 방어구(데벤져,글러브 제외)는 적혀진대로 입력하면 됩니다. <br>
 - 위치 참고는 <a href=https://i.imgur.com/5RFRpKI.png>[여기]</a>를 클릭해주세요. <br>
-- 렙제는 글러브에만 선택해주시면 됩니다. <br>
+- <b>렙제는 글러브에만 선택해주시면 됩니다. <br></b>
 - 일반 무기/방어구는 120제 이상의 아이템에만 적용됩니다.<br>
-- 글러브는 주스텟에 공/마, 부스텟에는 강화된 스타포스 수를 써주세요<br>
-  (아래에 보면 'n성 강화 적용'이라고 적혀있는데 여기서 n을 입력)<br>
+- <b>글러브</b>는 주스텟에는 공/마, <br>&nbsp;&nbsp;부스텟에는 강화된 스타포스 수를 써주세요<br>
+<font style="color:#bbbbbb">
+&nbsp;&nbsp;(아이템에 'n성 강화 적용'이라고 적혀있는데 여기서 n을 입력)<br>
+</font>
+<hr>
 - 전사ㅣ주스텟 STR / 부스텟 DEX<br>
 &nbsp;&nbsp;궁수ㅣ주스텟 DEX / 부스텟 STR<br>
 &nbsp;&nbsp;도적ㅣ주스텟 LUK / 부스텟 DEX<br>
 &nbsp;&nbsp;법사ㅣ주스텟 INT / 부스텟 LUK<br>
 &nbsp;&nbsp;해적ㅣ주스텟 STR 또는 DEX / 부스텟 DEX 또는 STR<br>
-- 데벤져 무기일 경우 주스텟에는 HP, 부스텟에는 MP를 써주세요.<br>
-- 데벤져 방어구일 경우 주스텟에는 HP, 부스텟에는 강화된 스타포스 수를 써주세요.<br>
-- 데벤져 방어구일 경우 150제 아이템에만 적용됩니다.<br>
+<hr>
+- 데벤져 무기일 경우 주스텟에 HP, 부스텟에 MP를 써주세요.<br>
+- 데벤져 방어구일 경우 주스텟에는 HP, <br>&nbsp;&nbsp;부스텟에는 강화된 스타포스 수를 써주세요.<br>
+- 데벤져 방어구일 경우 <b>150제</b> 아이템에만 적용됩니다.<br>
 
 </td></tr>
 <tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 0px">아이템 종류 선택</td></tr>
@@ -638,7 +642,7 @@ td { font-size:11pt; letter-spacing:-1px;text-align:center; }
 <input type="radio" name="option" onclick='call();buttoncontrol();' value="5"/>글러브
 (글러브 선택 시 렙제를 선택해주세요)
 </td></tr>
-<tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 5px">(글러브 전용) 렙제 선택</td></tr>
+<tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 5px"><b>(글러브 전용)</b> 렙제 선택</td></tr>
 <tr><td colspan=2 style="padding:0px 0 15px 0">
 <input type="radio" name="level" id ="level" onclick='call()' disabled value="1"/>120   
 <input type="radio" name="level" id ="level2" onclick='call()' disabled value="2"/>130    
@@ -648,19 +652,19 @@ td { font-size:11pt; letter-spacing:-1px;text-align:center; }
  <input type="radio" name="level" id ="level6" onclick='call()' disabled value="6"/>200
 </td></tr>
 <tr>
-<td width=170 style="text-align:right;">주스텟</td>
+<td width=140 style="text-align:right;">주스텟</td>
 <td width=230><input type='text' name='sell1' id='sell1' onkeyup='call()'></td>
 </tr>
 <tr>
-<td width=170 style="text-align:right;">부스텟</td>
+<td width=140 style="text-align:right;">부스텟</td>
 <td width=230><input type='text' name='sell2' id='sell2' onkeyup='call()' width="100%"></td>
 </tr>
 <tr>
-<td width=170 style="text-align:right;">작횟수</td>
+<td width=140 style="text-align:right;">작횟수</td>
 <td width=230><input type='text' name='sell3' id='sell3' onkeyup='call()'></td>
 </tr>
 <tr>
-<td width=170 style="text-align:right;">결과</td>
+<td width=140 style="text-align:right;">결과</td>
 <td width=230><input type='text' name='sell4' id='sell4' onkeyup='call()'></td>
 </tr>
 <tr><td colspan=2 style="padding:15px 5px 5px 5px; text-align:center; font-size:8pt"><b>🍁여성시대 메이플달글🍁</b></td></tr>
@@ -671,8 +675,8 @@ td { font-size:11pt; letter-spacing:-1px;text-align:center; }
 
 
 <DIV id=div_02 style="DISPLAY: none">
-<table border="0" align="center" width="400" style="padding:20px 0 0px 0; float:right;">
-<tr><td colspan=2 width="400" style="font-size:20pt;text-align:center; letter-spacing:-3px;"><b>추가옵션 계산기</b></td></tr>
+<table border="0" align="center" width="370" style="padding:20px 0 0px 0; float:right;">
+<tr><td colspan=2 width="370" style="font-size:20pt;text-align:center; letter-spacing:-3px;"><b>추가옵션 계산기</b></td></tr>
 <tr><td style="padding:5px 0 5px 0px"></td></tr>
 <tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 0px">사용방법 및 유의사항</td></tr>
 <tr><td colspan=2 style="font-size:10pt;text-align:left; padding:5px 0 15px 0px">
@@ -681,19 +685,19 @@ td { font-size:11pt; letter-spacing:-1px;text-align:center; }
 
 </td></tr>
 <tr>
-<td width=170 style="text-align:right;">주스텟</td>
+<td width=140 style="text-align:right;">주스텟</td>
 <td width=230><input type='text' name='m1' id='m1' onkeyup='whatkup()'></td>
 </tr>
 <tr>
-<td width=170 style="text-align:right;">올스텟퍼</td>
+<td width=140 style="text-align:right;">올스텟퍼</td>
 <td width=230><input type='text' name='m2' id='m2' onkeyup='whatkup()'></td>
 </tr>
 <tr>
-<td width=170 style="text-align:right;">공격력/마력</td>
+<td width=140 style="text-align:right;">공격력/마력</td>
 <td width=230><input type='text' name='m3' id='m3' onkeyup='whatkup()'></td>
 </tr>
 <tr>
-<td width=170 style="text-align:right;">결과</td>
+<td width=140 style="text-align:right;">결과</td>
 <td width=230><input type='text' name='result' id='result' onkeyup='whatkup()'></td>
 </tr>
 <tr><td colspan=2 style="padding:15px 5px 5px 5px; text-align:center; font-size:8pt"><b>🍁여성시대 메이플달글🍁</b></td></tr>
