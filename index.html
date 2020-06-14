@@ -68,6 +68,17 @@ document.getElementById('level6').disabled=false;
 }
 
 
+function buttoncontrol2()
+{
+	
+document.getElementById('level').disabled=true;
+document.getElementById('level2').disabled=true;
+document.getElementById('level3').disabled=true;
+document.getElementById('level4').disabled=true;
+document.getElementById('level5').disabled=true;
+document.getElementById('level6').disabled=true;
+}
+
 
 function call()
 {
@@ -635,10 +646,10 @@ td { font-size:11pt; letter-spacing:-1px;text-align:center; }
 </td></tr>
 <tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 0px">아이템 종류 선택</td></tr>
 <tr><td colspan=2 style=" padding:5px 0 15px 0px">
-<input type="radio" name="option" onclick='call()' value="1"/>무기    
-<input type="radio" name="option" onclick='call()' value="2"/>방어구    
-<input type="radio" name="option" onclick='call()' value="3"/>데벤무기    
-<input type="radio" name="option" onclick='call()' value="4"/>데벤방어구<br>
+<input type="radio" name="option" onclick='call();buttoncontrol2();' value="1"/>무기    
+<input type="radio" name="option" onclick='call();buttoncontrol2();' value="2"/>방어구    
+<input type="radio" name="option" onclick='call();buttoncontrol2();' value="3"/>데벤무기    
+<input type="radio" name="option" onclick='call();buttoncontrol2();' value="4"/>데벤방어구<br>
 <input type="radio" name="option" onclick='call();buttoncontrol();' value="5"/>글러브
 <font style="font-size:9pt;"><b>(글러브 선택 시 렙제를 선택해주세요)</font></b>
 </td></tr>
