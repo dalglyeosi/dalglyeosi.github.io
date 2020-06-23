@@ -651,15 +651,16 @@ td { font-size:11pt; letter-spacing:-1px;text-align:center; }
 </td></tr>
 <tr><td colspan=2 style="background-color:dddddd; padding:5px 0 5px 0px">아이템 종류 선택</td></tr>
 <tr><td colspan=2 style=" padding:5px 0 15px 0px">
-<input type="radio" name="option" onclick='call();buttoncontrol2();' value="1"/>무기    
-<input type="radio" name="option" onclick='call();buttoncontrol2();' value="2"/>방어구    
-<input type="radio" name="option" onclick='call();buttoncontrol2();' value="3"/>데벤무기    
-<input type="radio" name="option" onclick='call();buttoncontrol2();' value="4"/>데벤방어구<br>
-<input type="radio" name="option" onclick='call();buttoncontrol();' value="5"/>글러브
+<input type="radio" name="option" onclick='call();buttoncontrol2(); document.all.bb.style.background="#eeeeee"; document.all.bb.style.color="#999999"; document.all.cc.style.color="#999999";'' value="1"/>무기    
+<input type="radio" name="option" onclick='call();buttoncontrol2(); document.all.bb.style.background="#eeeeee"; document.all.bb.style.color="#999999"; document.all.cc.style.color="#999999";'' value="2"/>방어구    
+<input type="radio" name="option" onclick='call();buttoncontrol2(); document.all.bb.style.background="#eeeeee"; document.all.bb.style.color="#999999"; document.all.cc.style.color="#999999";'' value="3"/>데벤무기    
+<input type="radio" name="option" onclick='call();buttoncontrol2(); document.all.bb.style.background="#eeeeee"; document.all.bb.style.color="#999999"; document.all.cc.style.color="#999999";'' value="4"/>데벤방어구<br>
+
+<input type="radio" name="option" onclick='call();buttoncontrol(); document.all.bb.style.background="#dddddd"; document.all.bb.style.color="#000000"; document.all.cc.style.color="#000000";' value="5"/>글러브
 <font style="font-size:9pt;"><b>(글러브 선택 시 렙제를 선택해주세요)</font></b>
 </td></tr>
-<tr><td colspan=2 style="background-color:eeeeee; padding:5px 0 5px 5px"><b>(글러브 전용)</b> 렙제 선택</td></tr>
-<tr><td colspan=2 style="padding:5px 0 15px 0">
+<tr><td id=bb colspan=2 style="background-color:eeeeee; padding:5px 0 5px 5px; color:#999999"><b>(글러브 전용)</b> 렙제 선택</td></tr>
+<tr><td id=cc colspan=2 style="padding:5px 0 15px 0; color:#999999">
 <input type="radio" name="level" id ="level" onclick='call()' disabled value="1"/>120   
 <input type="radio" name="level" id ="level2" onclick='call()' disabled value="2"/>130    
 <input type="radio" name="level" id ="level3" onclick='call()' disabled value="3"/>140
