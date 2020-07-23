@@ -478,7 +478,7 @@ else if(volume_1==1) {
 
 function Timealet()
 {
-    document.getElementById('span1').innerHTML = "이벤트 시간이 아닙니다. 오전 10시 15분에 시작됩니다.";
+    document.getElementById('span1').innerHTML = "이벤트 시간이 아닙니다. 오전 12시에 시작됩니다.";
 }
 function Timealet2()
 {
@@ -518,13 +518,13 @@ function settime() {
   var nowTime2 = new Date(nowTime.getTime()-t3);
 
   if ( document.exf1.ch.value >22 && document.exf1.cm.value>45 ) {
-document.exf1.h.value=10; 
+document.exf1.h.value=12; 
 document.exf1.m.value=14; 
 Timealet();
 }
 
-else if ( document.exf1.ch.value < 10 ) {
-document.exf1.h.value=10; 
+else if ( document.exf1.ch.value < 12 ) {
+document.exf1.h.value=12; 
 document.exf1.m.value=14; 
 Timealet();
 }
@@ -532,16 +532,16 @@ Timealet();
 else { 
 Timealet2();
 
-	if (document.exf1.ch.value > 9 && document.exf1.cm.value>14 && document.exf1.cm.value<44) {	
+	if (document.exf1.ch.value > 11 && document.exf1.cm.value>14 && document.exf1.cm.value<44) {	
 	document.exf1.m.value=44; Timealet2();
 	document.exf1.h.value = nowTime2.getHours(); 
 	}
-	if (document.exf1.ch.value > 9 && document.exf1.cm.value>14 && document.exf1.cm.value>44) {	
+	if (document.exf1.ch.value > 11 && document.exf1.cm.value>14 && document.exf1.cm.value>44) {	
 	document.exf1.m.value=14;
 	document.exf1.h.value = nowTime2.getHours()+1; 
  	Timealet2(); 
 	}
-	if (document.exf1.ch.value > 9 && document.exf1.cm.value<14) { 	document.exf1.m.value=14; Timealet2(); 
+	if (document.exf1.ch.value > 11 && document.exf1.cm.value<14) { 	document.exf1.m.value=14; Timealet2(); 
 	document.exf1.h.value = nowTime2.getHours(); 
 	}
 }
@@ -599,7 +599,7 @@ audio.play();
 
 
 if (recheck==true) {
-	if (document.exf1.ch.value<24 && document.exf1.ch.value>9) {
+	if (document.exf1.ch.value<24 && document.exf1.ch.value>11) {
 	if (document.exf1.cm.value==15 || document.exf1.cm.value==45) {
 	if (document.exf1.cs.value==1) {
 	audio.play();
@@ -619,7 +619,7 @@ onload=initAlarm;
 
 <br>
 <font style="text-align:center; font-size:8pt"><b>🍁여성시대 메이플달글🍁</b></font>
-<br>
+<br><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=game.gif><br><br><hr><br><div class=notice><b>최근 버그 수정 : 2019.01.18 11:35</b><br>
 <b>사용중 컴퓨터의 시간을 바꾸게 된다면 반드시 새로고침 해주세요!</b>
